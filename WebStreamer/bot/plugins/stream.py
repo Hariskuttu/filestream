@@ -28,7 +28,7 @@ async def media_receive_handler(_, m: Message):
     stream_link = Var.URL + str(log_msg.message_id) + '/' +quote_plus(file_name) if file_name else ''
     stream_links = f"https://t.me/cdnmallu"
     await m.reply_text(
-        text=f"https://shorturllink.in/api?api=d2d1d6cad73733df5d40f6b5fb6b03111c293206&url={stream_link}",
+        text=f"{stream_link}",
         quote=True,
         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('File Manager 📁', url=stream_links)]])
     )
